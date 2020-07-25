@@ -1,0 +1,36 @@
+# 
+#   Copyright (C) 2017-2018 Philipp Paulweber
+#   All rights reserved.
+# 
+#   Developed by: Philipp Paulweber
+#                 <https://github.com/ppaulweber/docker-mvn>
+# 
+#   This file is part of docker-mvn.
+# 
+#   docker-mvn is free software: you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation, either version 3 of the License, or
+#   (at your option) any later version.
+# 
+#   docker-mvn is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#   GNU General Public License for more details.
+# 
+#   You should have received a copy of the GNU General Public License
+#   along with docker-mvn. If not, see <http://www.gnu.org/licenses/>.
+# 
+
+* docker-mvn: Maven Java Build Environment Docker Container Image
+
+Provides a =Dockerfile= which creates a Maven build environment along with a selected OpenJDK =java= version and several other tools.
+There exists an automated build process hosted and located at https://hub.docker.com/ppaulweber/docker-mvn.
+The =master= branch equals the =:latest= docker image tag.
+
+
+** Copyright and License
+
+The copyright holder of 
+docker-mvn is the Philipp Paulweber ([[https://github.com/ppaulweber][@ppaulweber]]) 
+and the used license of 
+docker-mvn is a [[https://www.gnu.org/licenses/gpl-3.0.html][GNU GPLv3+]].
