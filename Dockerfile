@@ -26,7 +26,9 @@ FROM openjdk:14-jdk-alpine3.10
 RUN apk add --no-cache \
     bash \
     make \
-    maven \
- && rm -rf /var/cache/apk/*
+ && rm -rf /var/cache/apk/* \
+ && wget -c https://archive.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz -O - | tar -xz \
+ && mv    /apache-maven-3.6.0/* /usr/local/ \
+ && rmdir /apache-maven-3.6.0
 
 CMD ["/bin/sh"]
