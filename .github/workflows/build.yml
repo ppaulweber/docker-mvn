@@ -1,0 +1,44 @@
+#
+#   Copyright (C) 2020 Philipp Paulweber
+#   All rights reserved.
+#
+#   Developed by: Philipp Paulweber
+#                 <https://github.com/ppaulweber/docker-mvn>
+#
+#   This file is part of docker-mvn.
+#
+#   docker-mvn is free software: you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation, either version 3 of the License, or
+#   (at your option) any later version.
+#
+#   docker-mvn is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with docker-mvn. If not, see <http://www.gnu.org/licenses/>.
+#
+
+name: build
+
+on: [push]
+
+jobs:
+  docker:
+    strategy:
+      matrix:
+        os: [ ubuntu-latest ]
+    runs-on: ${{ matrix.os }}
+    steps:
+    - uses: actions/checkout@v1
+    - name: Building
+      run:  |
+        make build
+    - name: Deploying
+      run:  |
+        echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
+        make deploy
+        docker logout
+        rm -f $HOME/.docker/config.json
