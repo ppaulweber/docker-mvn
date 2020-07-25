@@ -21,9 +21,9 @@
 #   along with docker-mvn. If not, see <http://www.gnu.org/licenses/>.
 # 
 
-* docker-mvn: Maven Java Build Environment Docker Container Image
+* docker-mvn: Maven-based Java Build Environment Docker Container Image
 
-Provides a =Dockerfile= which creates a Maven build environment along with a selected OpenJDK =java= version and several other tools.
+Provides a =Dockerfile= which creates a Maven-based build environment along with a selected OpenJDK =java= version and several other tools.
 There exists an automated build process hosted and located at https://hub.docker.com/ppaulweber/docker-mvn.
 The =master= branch equals the =:latest= docker image tag.
 
