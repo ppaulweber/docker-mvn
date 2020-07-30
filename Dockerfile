@@ -23,15 +23,18 @@
 
 FROM openjdk:14-jdk-alpine3.10
 
-COPY pom.xml /root/pom.xml
-
 RUN apk add --no-cache \
     bash \
     make \
  && rm -rf /var/cache/apk/* \
  && wget -c https://archive.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz -O - | tar -xz \
  && mv    /apache-maven-3.6.0/* /usr/local/ \
- && rmdir /apache-maven-3.6.0 \
- && (cd /root; mvn dependency:go-offline)
+ && rmdir /apache-maven-3.6.0
+
+COPY .m2.tar.gz /root/
+RUN (cd /root; tar -xzvf .m2.tar.gz && rm .m2.tar.gz)
+
+# COPY pom.xml /root/pom.xml
+# RUN (cd /root; mvn dependency:go-offline -X)
 
 CMD ["/bin/sh"]
