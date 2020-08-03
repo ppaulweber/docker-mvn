@@ -54,3 +54,6 @@ run:
 deploy:
 	@echo "-- docker: push '${DOCKER_IMAGE}'"
 	docker push ${DOCKER_IMAGE}
+
+repository:
+	tar -czvf .m2.tar.gz .m2
