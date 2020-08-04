@@ -37,4 +37,8 @@ RUN (cd /root; tar -xzvf .m2.tar.gz && rm .m2.tar.gz)
 # COPY pom.xml /root/pom.xml
 # RUN (cd /root; mvn dependency:go-offline -X)
 
+COPY .gw.tar.gz /root/
+RUN (cd /root; tar -xzvf .gw.tar.gz && rm .gw.tar.gz) && \
+    (cd /root/.gw; ./gradlew --version)
+
 CMD ["/bin/sh"]
