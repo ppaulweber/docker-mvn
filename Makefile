@@ -47,6 +47,10 @@ build:
 	@echo "-- docker: build '${DOCKER_IMAGE}'"
 	docker build -t ${DOCKER_IMAGE} .
 
+build-no-cache:
+	@echo "-- docker: build '${DOCKER_IMAGE}'"
+	docker build -t ${DOCKER_IMAGE} --no-cache .
+
 run:
 	@echo "-- docker: run '${DOCKER_IMAGE}'"
 	docker run -it ${DOCKER_IMAGE} bash
