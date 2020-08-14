@@ -31,14 +31,9 @@ RUN apk add --no-cache \
  && mv    /apache-maven-3.6.0/* /usr/local/ \
  && rmdir /apache-maven-3.6.0
 
-COPY .m2.tar.gz /root/
-RUN (cd /root; tar -xzvf .m2.tar.gz && rm .m2.tar.gz)
+COPY .m2 /root/
 
-# COPY pom.xml /root/pom.xml
-# RUN (cd /root; mvn dependency:go-offline -X)
-
-COPY .gw.tar.gz /root/
-RUN (cd /root; tar -xzvf .gw.tar.gz && rm .gw.tar.gz) && \
-    (cd /root/.gw; ./gradlew --version)
+COPY .gw /root/
+RUN (cd /root/.gw; ./gradlew --version)
 
 CMD ["/bin/sh"]
