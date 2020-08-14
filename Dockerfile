@@ -31,9 +31,9 @@ RUN apk add --no-cache \
  && mv    /apache-maven-3.6.0/* /usr/local/ \
  && rmdir /apache-maven-3.6.0
 
-COPY .m2 /root/
+COPY .m2 /root/.m2
 
-COPY .gw /root/
+COPY .gw /root/.gw
 RUN (cd /root/.gw; ./gradlew --version)
 
 CMD ["/bin/sh"]
