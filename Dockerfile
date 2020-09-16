@@ -30,6 +30,7 @@ RUN apk add --no-cache \
     clang \
     gcc \
     valgrind \
+ && apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing \
     hyperfine \
  && rm -rf /var/cache/apk/* \
  && wget -c https://archive.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz -O - | tar -xz \
