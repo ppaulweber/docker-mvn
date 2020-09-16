@@ -29,6 +29,8 @@ RUN apk add --no-cache \
     cmake \
     clang \
     gcc \
+    g++ \
+    musl-dev \
     valgrind \
  && apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing \
     hyperfine \
