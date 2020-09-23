@@ -24,6 +24,7 @@
 FROM openjdk:14-jdk-alpine3.10
 
 RUN apk add --no-cache \
+    git \
     bash \
     make \
     cmake \
