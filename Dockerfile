@@ -33,6 +33,8 @@ RUN apk add --no-cache \
     g++ \
     musl-dev \
     valgrind \
+    zip \
+    unzip \
  && apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing \
     hyperfine \
  && rm -rf /var/cache/apk/* \
