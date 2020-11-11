@@ -31,6 +31,7 @@ RUN apk add --no-cache \
     clang \
     gcc \
     g++ \
+    python3 \
     musl-dev \
     valgrind \
     zip \
