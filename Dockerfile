@@ -23,7 +23,7 @@
 
 FROM openjdk:14-jdk-alpine3.10
 
-RUN apk add --no-cache \
+RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.12/main \
     git \
     bash \
     make \
@@ -36,6 +36,7 @@ RUN apk add --no-cache \
     valgrind \
     zip \
     unzip \
+    libelf \
  && rm -rf /var/cache/apk/*
 
 RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.12/community \
