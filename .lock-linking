@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# see: https://gist.github.com/msullivan/d33029fcda6889b7d097
+
+# Run a command with a lock if it looks like it is a linker command: that is,
+# if none of its arguments are -c.
+
+# Then you can do a build where compilation is parallel but linking is serial
+# by doing something like (for llvm/clang):
+# make -j4 'CXX=lock-linking /tmp/llvm-build-lock clang++'
+
+LOCKFILE="$1"
+shift
+for I in "$@"; do
+    if [ $I = "-c" ]; then
+	# Not a linker command, just run it
+	exec "$@"
+    fi
+done
+
+# Run the linker command under the lock
+flock "$LOCKFILE" "$@"

@@ -61,6 +61,9 @@ COPY .m2 /root/.m2
 
 COPY .gw /root/.gw
 
-RUN (cd /root/.gw; ./gradlew --version)
+COPY .lock-linking /usr/bin/lock-linking
+
+RUN chmod 755 /usr/bin/lock-linking \
+ && (cd /root/.gw; ./gradlew --version)
 
 CMD ["/bin/sh"]
