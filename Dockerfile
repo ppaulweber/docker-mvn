@@ -41,7 +41,7 @@ RUN apk add --no-cache \
 RUN echo "x86" > /etc/apk/arch \
  && apk add --no-cache \
     libelf \
- && echo "x86_64" > /etc/apk/arch
+ && echo "x86_64" > /etc/apk/arch \
  && rm -rf /var/cache/apk/*
 
 RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/community \
