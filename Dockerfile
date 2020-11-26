@@ -38,13 +38,13 @@ RUN apk add --no-cache \
     unzip \
  && rm -rf /var/cache/apk/*
 
-RUN echo "x86" > /etc/apk/arch \
- && apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/main \
-    libelf \
- && echo "x86_64" > /etc/apk/arch \
- && rm -rf /var/cache/apk/*
+# RUN echo "x86" > /etc/apk/arch \
+#  && apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/main \
+#     libelf \
+#  && echo "x86_64" > /etc/apk/arch \
+#  && rm -rf /var/cache/apk/*
 
-RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/community \
+RUN apk add --no-cache -X https://alpine.pkgs.org/3.12/alpine-community-x86_64 \
     perf \
  && rm -rf /var/cache/apk/*
 
