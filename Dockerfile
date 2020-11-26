@@ -36,8 +36,10 @@ RUN apk add --no-cache \
     valgrind \
     zip \
     unzip \
+ && echo "x86" > /etc/apk/arch \
+ && apk add --no-cache \
     libelf \
-    elfutils-dev \
+ && echo "x86_64" > /etc/apk/arch \
  && apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/community \
     perf \
  && apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing \
