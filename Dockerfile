@@ -39,6 +39,10 @@ RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.12/main \
     libelf \
  && rm -rf /var/cache/apk/*
 
+RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.11/main \
+    ninja \
+ && rm -rf /var/cache/apk/*
+
 RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.12/community \
     perf \
  && rm -rf /var/cache/apk/*
