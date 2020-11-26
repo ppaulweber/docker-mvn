@@ -38,19 +38,19 @@ RUN apk add --no-cache \
     unzip \
  && rm -rf /var/cache/apk/*
 
-# RUN echo "x86" > /etc/apk/arch \
-#  && apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/main \
-#     libelf \
-#  && echo "x86_64" > /etc/apk/arch \
-#  && rm -rf /var/cache/apk/*
-
-RUN apk add --no-cache -X https://alpine.pkgs.org/3.12/alpine-community-x86_64 \
+RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.12/community \
     perf \
  && rm -rf /var/cache/apk/*
 
 RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing \
     hyperfine \
  && rm -rf /var/cache/apk/*
+
+# RUN echo "x86" > /etc/apk/arch \
+#  && apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/TAG/REPO \
+#     libelf \
+#  && echo "x86_64" > /etc/apk/arch \
+#  && rm -rf /var/cache/apk/*
 
 RUN wget -c https://archive.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz -O - | tar -xz \
  && mv    /apache-maven-3.6.0/* /usr/local/ \
