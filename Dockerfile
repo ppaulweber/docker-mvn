@@ -36,22 +36,28 @@ RUN apk add --no-cache \
     valgrind \
     zip \
     unzip \
- && echo "x86" > /etc/apk/arch \
+ && rm -rf /var/cache/apk/*
+
+RUN echo "x86" > /etc/apk/arch \
  && apk add --no-cache \
     libelf \
- && echo "x86_64" > /etc/apk/arch \
- && apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/community \
+ && echo "x86_64" > /etc/apk/arch
+ && rm -rf /var/cache/apk/*
+
+RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/community \
     perf \
  && apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing \
     hyperfine \
- && rm -rf /var/cache/apk/* \
- && wget -c https://archive.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz -O - | tar -xz \
+ && rm -rf /var/cache/apk/*
+
+RUN wget -c https://archive.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz -O - | tar -xz \
  && mv    /apache-maven-3.6.0/* /usr/local/ \
  && rmdir /apache-maven-3.6.0
 
 COPY .m2 /root/.m2
 
 COPY .gw /root/.gw
+
 RUN (cd /root/.gw; ./gradlew --version)
 
 CMD ["/bin/sh"]
