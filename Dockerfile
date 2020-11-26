@@ -39,14 +39,16 @@ RUN apk add --no-cache \
  && rm -rf /var/cache/apk/*
 
 RUN echo "x86" > /etc/apk/arch \
- && apk add --no-cache \
+ && apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/main \
     libelf \
  && echo "x86_64" > /etc/apk/arch \
  && rm -rf /var/cache/apk/*
 
 RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/community \
     perf \
- && apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing \
+ && rm -rf /var/cache/apk/*
+
+RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing \
     hyperfine \
  && rm -rf /var/cache/apk/*
 
