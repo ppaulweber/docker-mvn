@@ -47,8 +47,11 @@ RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.12/community \
     perf \
  && rm -rf /var/cache/apk/*
 
-RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing \
+RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/community \
     hyperfine \
+ && rm -rf /var/cache/apk/*
+
+RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing \
     sbt \
  && rm -rf /var/cache/apk/*
 
