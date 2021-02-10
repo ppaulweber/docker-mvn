@@ -23,7 +23,7 @@
 
 FROM openjdk:14-jdk-alpine3.10
 
-RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.12/main \
+RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.13/main \
     git \
     bash \
     make \
@@ -39,16 +39,13 @@ RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.12/main \
     libelf \
  && rm -rf /var/cache/apk/*
 
+RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.13/community \
+    perf \
+    hyperfine \
+ && rm -rf /var/cache/apk/*
+
 RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.11/main \
     ninja \
- && rm -rf /var/cache/apk/*
-
-RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.12/community \
-    perf \
- && rm -rf /var/cache/apk/*
-
-RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/community \
-    hyperfine \
  && rm -rf /var/cache/apk/*
 
 RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing \
