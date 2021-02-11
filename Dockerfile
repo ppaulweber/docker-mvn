@@ -63,16 +63,16 @@ RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing \
 #  && echo "x86_64" > /etc/apk/arch \
 #  && rm -rf /var/cache/apk/*
 
+RUN wget -c https://archive.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz -O - | tar -xz \
+ && mv    /apache-maven-3.6.0/* /usr/local/ \
+ && rmdir /apache-maven-3.6.0
+
 RUN wget -c https://www.veripool.org/ftp/verilator-4.108.tgz -O - | tar -xz \
  && cd /verilator-4.108 \
  && ./configure \
  && make \
  && make install -j4 \
  && rm -rf /verilator*
-
-RUN wget -c https://archive.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz -O - | tar -xz \
- && mv    /apache-maven-3.6.0/* /usr/local/ \
- && rmdir /apache-maven-3.6.0
 
 COPY .m2 /root/.m2
 
@@ -82,5 +82,9 @@ COPY .lock-linking /usr/bin/lock-linking
 
 RUN chmod 755 /usr/bin/lock-linking \
  && (cd /root/.gw; ./gradlew --version)
+
+RUN mvn --version \
+ && sbt --version \
+ && verilator --version
 
 CMD ["/bin/sh"]
