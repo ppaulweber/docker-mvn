@@ -36,12 +36,12 @@ RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.13/main \
     zip \
     unzip \
     libelf \
-    z3 \
  && rm -rf /var/cache/apk/*
 
 RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.13/community \
     perf \
     hyperfine \
+    z3 \
  && rm -rf /var/cache/apk/*
 
 RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.11/main \
