@@ -64,8 +64,8 @@ RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing \
 #  && rm -rf /var/cache/apk/*
 
 RUN wget -c https://archive.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz -O - | tar -xz \
- && mv    /apache-maven-3.6.0/* /usr/local/ \
- && rmdir /apache-maven-3.6.0
+ && cp -rf /apache-maven-3.6.0/* /usr/local/ \
+ && rm -rf /apache-maven-3.6.0
 
 RUN wget -c https://www.veripool.org/ftp/verilator-4.108.tgz -O - | tar -xz \
  && cd /verilator-4.108 \
