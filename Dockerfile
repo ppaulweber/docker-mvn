@@ -67,7 +67,7 @@ RUN wget -c https://www.veripool.org/ftp/verilator-4.108.tgz -O - | tar -xz \
  && cd /verilator-4.108 \
  && ./configure \
  && make \
- && make install -j4
+ && make install -j4 \
  && rm -rf /verilator*
 
 RUN wget -c https://archive.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz -O - | tar -xz \
