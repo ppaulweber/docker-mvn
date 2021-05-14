@@ -38,6 +38,7 @@ RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.13/main \
     python3 \
     musl-dev \
     valgrind \
+    curl \
     zip \
     unzip \
     libelf \
@@ -46,6 +47,7 @@ RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.13/main \
 RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.13/community \
     perf \
     hyperfine \
+    yq \
     z3 \
  && rm -rf /var/cache/apk/*
 
