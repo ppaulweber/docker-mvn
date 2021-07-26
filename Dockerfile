@@ -66,7 +66,7 @@ RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/main \
     ccache \
  && rm -rf /var/cache/apk/*
 
-RUN wget -c https://github.com/sbt/sbt/releases/download/v1.5.5/sbt-1.5.5.zip -O - \
+RUN wget -c https://github.com/sbt/sbt/releases/download/v1.5.5/sbt-1.5.5.zip \
  && unzip sbt-1.5.5.zip \
  && cp -rf /sbt/* /usr/local/ \
  && rm -rf /sbt sbt-1.5.5.zip
