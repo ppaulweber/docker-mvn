@@ -33,6 +33,7 @@ RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.13/main \
     wget \
     make \
     cmake \
+    ccache \
     gcc \
     g++ \
     python3 \
