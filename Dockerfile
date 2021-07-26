@@ -56,10 +56,6 @@ RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.11/main \
     ninja \
  && rm -rf /var/cache/apk/*
 
-RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing \
-    sbt \
- && rm -rf /var/cache/apk/*
-
 # RUN echo "x86" > /etc/apk/arch \
 #  && apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/TAG/REPO \
 #     libelf \
