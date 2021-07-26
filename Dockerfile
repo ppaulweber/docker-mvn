@@ -55,10 +55,6 @@ RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.11/main \
     ninja \
  && rm -rf /var/cache/apk/*
 
-RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/main \
-    ccache \
- && rm -rf /var/cache/apk/*
-
 RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing \
     sbt \
  && rm -rf /var/cache/apk/*
@@ -68,6 +64,10 @@ RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing \
 #     libelf \
 #  && echo "x86_64" > /etc/apk/arch \
 #  && rm -rf /var/cache/apk/*
+
+RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/main \
+    ccache \
+ && rm -rf /var/cache/apk/*
 
 RUN wget -c https://archive.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz -O - | tar -xz \
  && cp -rf /apache-maven-3.6.0/* /usr/local/ \
