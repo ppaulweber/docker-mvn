@@ -33,6 +33,7 @@ RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.13/main \
     wget \
     make \
     cmake \
+    ccache \
     gcc \
     g++ \
     python3 \
@@ -68,6 +69,11 @@ RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing \
 RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/main \
     ccache \
  && rm -rf /var/cache/apk/*
+
+RUN wget -c https://github.com/sbt/sbt/releases/download/v1.5.5/sbt-1.5.5.zip -O - \
+ && unzip sbt-1.5.5.zip \
+ && cp -rf /sbt/* /usr/local/ \
+ && rm -rf /sbt sbt-1.5.5.zip
 
 RUN wget -c https://archive.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz -O - | tar -xz \
  && cp -rf /apache-maven-3.6.0/* /usr/local/ \
