@@ -33,7 +33,6 @@ RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.13/main \
     wget \
     make \
     cmake \
-    ccache \
     gcc \
     g++ \
     python3 \
@@ -54,6 +53,10 @@ RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.13/community \
 
 RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.11/main \
     ninja \
+ && rm -rf /var/cache/apk/*
+
+RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/main \
+    ccache \
  && rm -rf /var/cache/apk/*
 
 RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing \
