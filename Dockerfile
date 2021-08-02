@@ -36,8 +36,12 @@ RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.13/main \
     ccache \
     gcc \
     g++ \
-    python3 \
+    clang \
+    lld \
     musl-dev \
+    compiler-rt \
+    compiler-rt-static \
+    python3 \
     valgrind \
     curl \
     zip \
@@ -93,6 +97,8 @@ RUN chmod 755 /usr/bin/lock-linking \
 
 RUN mvn --version \
  && sbt --version \
- && verilator --version
+ && verilator --version \
+ && clang --version \
+ && llc --version
 
 CMD ["/bin/sh"]
