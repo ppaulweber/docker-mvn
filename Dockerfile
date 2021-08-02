@@ -89,16 +89,16 @@ RUN wget https://github.com/mikefarah/yq/releases/download/v4.2.0/yq_linux_amd64
  && chmod +x /usr/local/bin/yq \
  && yq --version
 
-# RUN git clone https://github.com/llvm/llvm-project.git --depth=1 --branch llvmorg-10.0.0 llvm \
-#  && (cd llvm; mkdir -p build; cd build; \
-#     cmake -GNinja -S ../llvm . \
-#     -DCMAKE_BUILD_TYPE=MinSizeRel \
-#     -DCMAKE_CXX_STANDARD=14 \
-#     -DLLVM_ENABLE_PROJECT=clang ) \
-#  && (cd llvm/build; cmake --build .) \
-#  && cp -rvf llvm/build/* /usr/local/ \
-#  && clang --version \
-#  && llc --version
+RUN git clone https://github.com/llvm/llvm-project.git --depth=1 --branch llvmorg-10.0.0 llvm \
+ && (cd llvm; mkdir -p build; cd build; \
+    cmake -GNinja -S ../llvm . \
+    -DCMAKE_BUILD_TYPE=MinSizeRel \
+    -DCMAKE_CXX_STANDARD=14 \
+    -DLLVM_ENABLE_PROJECT=clang ) \
+ && (cd llvm/build; cmake --build .) \
+ && cp -rvf llvm/build/* /usr/local/ \
+ && clang --version \
+ && llc --version
 
 COPY .m2 /root/.m2
 
