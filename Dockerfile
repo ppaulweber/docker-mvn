@@ -36,11 +36,8 @@ RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.13/main \
     ccache \
     gcc \
     g++ \
-    clang \
-    lld \
     musl-dev \
-    compiler-rt \
-    compiler-rt-static \
+    ncurses5 \
     python3 \
     valgrind \
     curl \
@@ -85,6 +82,10 @@ RUN wget -c https://www.veripool.org/ftp/verilator-4.108.tgz -O - | tar -xz \
  && make \
  && make install -j4 \
  && rm -rf /verilator*
+
+RUN wget -c https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/clang+llvm-10.0.0-x86_64-linux-sles11.3.tar.xz -O - | tar -xz \
+ && cp -rf /clang+llvm-10.0.0-x86_64-linux-sles11.3/* /usr/local/ \
+ && rm -rf /clang+llvm-10.0.0-x86_64-linux-sles11.3
 
 COPY .m2 /root/.m2
 
