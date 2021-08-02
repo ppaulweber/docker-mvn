@@ -49,7 +49,6 @@ RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.13/main \
 RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.13/community \
     perf \
     hyperfine \
-    yq \
     z3 \
  && rm -rf /var/cache/apk/*
 
@@ -96,6 +95,10 @@ RUN wget -c https://www.veripool.org/ftp/verilator-4.108.tgz -O - | tar -xz \
  && make install -j4 \
  && rm -rf /verilator* \
  && verilator --version
+
+RUN wget https://github.com/mikefarah/yq/releases/download/v4.2.0/yq_linux_amd64 -O /usr/local/bin/yq \
+ && chmod +x /usr/local/bin/yq
+ && yq --version
 
 COPY .m2 /root/.m2
 
