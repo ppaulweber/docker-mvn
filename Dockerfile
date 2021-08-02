@@ -86,7 +86,7 @@ RUN wget -c https://www.veripool.org/ftp/verilator-4.108.tgz -O - | tar -xz \
  && verilator --version
 
 RUN wget https://github.com/mikefarah/yq/releases/download/v4.2.0/yq_linux_amd64 -O /usr/local/bin/yq \
- && chmod +x /usr/local/bin/yq
+ && chmod +x /usr/local/bin/yq \
  && yq --version
 
 # RUN git clone https://github.com/llvm/llvm-project.git --depth=1 --branch llvmorg-10.0.0 llvm \
