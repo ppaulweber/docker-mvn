@@ -67,9 +67,10 @@ RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/main \
     ccache \
  && rm -rf /var/cache/apk/*
 
-RUN wget -c https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/clang+llvm-10.0.0-x86_64-linux-sles11.3.tar.xz -O - | tar -xf \
- && cp -rf /clang+llvm-10.0.0-x86_64-linux-sles11.3/* /usr/local/ \
- && rm -rf /clang+llvm-10.0.0-x86_64-linux-sles11.3 \
+RUN wget -c https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/clang+llvm-10.0.0-x86_64-linux-sles11.3.tar.xz \
+ && tar xf clang+llvm-10.0.0-x86_64-linux-sles11.3.tar.xz
+ && cp -rf clang+llvm-10.0.0-x86_64-linux-sles11.3/* /usr/local/ \
+ && rm -rf clang+llvm-10.0.0-x86_64-linux-sles11.3* \
  && clang --version \
  && llc --version
 
