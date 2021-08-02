@@ -70,11 +70,7 @@ RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/main \
 RUN wget -c https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/clang+llvm-10.0.0-x86_64-linux-sles11.3.tar.xz \
  && tar xvf /clang+llvm-10.0.0-x86_64-linux-sles11.3.tar.xz \
  && cp -rvf /clang+llvm-10.0.0-x86_64-linux-sles11.3/* /usr/local/ \
- && rm -rf  /clang+llvm-10.0.0-x86_64-linux-sles11.3* \
- && chmod 755 /usr/local/bin/clang \
- && chmod 755 /usr/local/bin/llc \
- && clang --version \
- && llc --version
+ && rm -rf  /clang+llvm-10.0.0-x86_64-linux-sles11.3*
 
 RUN wget -c https://github.com/sbt/sbt/releases/download/v1.5.5/sbt-1.5.5.zip \
  && unzip   /sbt-1.5.5.zip \
