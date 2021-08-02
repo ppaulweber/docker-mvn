@@ -45,6 +45,7 @@ RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.13/main \
     unzip \
     libelf \
     hexdump \
+    diffutils \
  && rm -rf /var/cache/apk/*
 
 RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/v3.13/community \
