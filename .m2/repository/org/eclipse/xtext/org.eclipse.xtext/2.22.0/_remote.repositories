@@ -1,4 +1,8 @@
 #NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
-#Wed Aug 26 22:31:58 CEST 2020
+#Thu Aug 05 16:48:06 CEST 2021
 org.eclipse.xtext-2.22.0.pom>central=
+org.eclipse.xtext-2.22.0.pom>=
+org.eclipse.xtext-2.22.0-javadoc.jar>=
+org.eclipse.xtext-2.22.0-sources.jar>=
+org.eclipse.xtext-2.22.0.jar>=
 org.eclipse.xtext-2.22.0.jar>central=
