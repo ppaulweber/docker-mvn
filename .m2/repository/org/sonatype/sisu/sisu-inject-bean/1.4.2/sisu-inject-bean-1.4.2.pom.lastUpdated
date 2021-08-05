@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Aug 05 17:39:15 CEST 2021
+https\://repo.maven.apache.org/maven2/.lastUpdated=1628177955185
+@p2-my-p2-maven-site-file\:///home/pp/gitea/vadl/rtl/vadl/lib/p2/.lastUpdated=1628177955135
+file\:///home/pp/gitea/vadl/rtl/vadl/lib/p2/.error=Could not transfer artifact org.sonatype.sisu\:sisu-inject-bean\:pom\:1.4.2 from/to my-p2-maven-site (file\:///home/pp/gitea/vadl/rtl/vadl/lib/p2)\: Cannot access file\:///home/pp/gitea/vadl/rtl/vadl/lib/p2 with type p2 using the available connector factories\: BasicRepositoryConnectorFactory

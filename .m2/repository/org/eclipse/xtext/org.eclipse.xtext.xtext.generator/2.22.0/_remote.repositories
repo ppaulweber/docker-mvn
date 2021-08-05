@@ -1,8 +1,6 @@
 #NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
-#Thu Aug 05 16:48:24 CEST 2021
+#Thu Aug 05 17:42:40 CEST 2021
 org.eclipse.xtext.xtext.generator-2.22.0.jar>=
-org.eclipse.xtext.xtext.generator-2.22.0.jar>central=
-org.eclipse.xtext.xtext.generator-2.22.0.pom>central=
 org.eclipse.xtext.xtext.generator-2.22.0.pom>=
 org.eclipse.xtext.xtext.generator-2.22.0-javadoc.jar>=
 org.eclipse.xtext.xtext.generator-2.22.0-sources.jar>=

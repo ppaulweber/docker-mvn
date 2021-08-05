@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Aug 05 17:42:23 CEST 2021
+https\://repo.maven.apache.org/maven2/.lastUpdated=1628178143817
+@p2-my-p2-maven-site-file\:///home/pp/gitea/vadl/rtl/vadl/lib/p2/.lastUpdated=1628178143759
+file\:///home/pp/gitea/vadl/rtl/vadl/lib/p2/.error=Could not transfer artifact org.codehaus.plexus\:plexus-utils\:pom\:3.0.5 from/to my-p2-maven-site (file\:///home/pp/gitea/vadl/rtl/vadl/lib/p2)\: Cannot access file\:///home/pp/gitea/vadl/rtl/vadl/lib/p2 with type p2 using the available connector factories\: BasicRepositoryConnectorFactory
