@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Aug 05 19:23:46 CEST 2021
+https\://repo.maven.apache.org/maven2/.lastUpdated=1628184226304
+http\://0.0.0.0/.error=Could not transfer artifact plexus\:plexus-utils\:pom\:1.0.2 from/to maven-default-http-blocker (http\://0.0.0.0/)\: Blocked mirror for repositories\: [codehaus-snapshots (http\://nexus.codehaus.org/snapshots/, default, disabled), apache.snapshots (http\://repository.apache.org/snapshots, default, snapshots), snapshots (http\://snapshots.maven.codehaus.org/maven2, default, snapshots), central (http\://repo1.maven.org/maven2, default, releases)]
+@default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1628184226249

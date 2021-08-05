@@ -1,5 +1,5 @@
 #NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
-#Thu Aug 05 17:42:32 CEST 2021
+#Thu Aug 05 18:05:38 CEST 2021
 org.eclipse.xtext.util-2.22.0-sources.jar>=
 org.eclipse.xtext.util-2.22.0.jar>=
 org.eclipse.xtext.util-2.22.0.pom>=
