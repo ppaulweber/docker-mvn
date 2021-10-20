@@ -1,5 +1,5 @@
 #NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
-#Thu Aug 05 17:39:14 CEST 2021
-https\://repo.maven.apache.org/maven2/.lastUpdated=1628177954301
-@p2-my-p2-maven-site-file\:///home/pp/gitea/vadl/rtl/vadl/lib/p2/.lastUpdated=1628177954249
-file\:///home/pp/gitea/vadl/rtl/vadl/lib/p2/.error=Could not transfer artifact org.sonatype.forge\:forge-parent\:pom\:4 from/to my-p2-maven-site (file\:///home/pp/gitea/vadl/rtl/vadl/lib/p2)\: Cannot access file\:///home/pp/gitea/vadl/rtl/vadl/lib/p2 with type p2 using the available connector factories\: BasicRepositoryConnectorFactory
+#Wed Oct 20 15:12:33 CEST 2021
+https\://repo.maven.apache.org/maven2/.lastUpdated=1634735553559
+file\:///home/pp/gitea/vadl/wtf/vadl/lib/p2/.error=Could not transfer artifact org.sonatype.forge\:forge-parent\:pom\:4 from/to my-p2-maven-site (file\:///home/pp/gitea/vadl/wtf/vadl/lib/p2)\: Cannot access file\:///home/pp/gitea/vadl/wtf/vadl/lib/p2 with type p2 using the available connector factories\: BasicRepositoryConnectorFactory
+@p2-my-p2-maven-site-file\:///home/pp/gitea/vadl/wtf/vadl/lib/p2/.lastUpdated=1634735553501
