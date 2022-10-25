@@ -1,5 +1,0 @@
-#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
-#Wed Oct 20 15:25:03 CEST 2021
-https\://repo.maven.apache.org/maven2/.lastUpdated=1634736303741
-http\://0.0.0.0/.error=Could not transfer artifact antlr\:antlr\:pom\:2.7.7 from/to maven-default-http-blocker (http\://0.0.0.0/)\: Blocked mirror for repositories\: [codehaus-snapshots (http\://nexus.codehaus.org/snapshots/, default, disabled), ossrh-snapshots (http\://oss.sonatype.org/content/repositories/snapshots, default, snapshots), antlr-snapshot (http\://antlr.org/antlr-snapshot, default, releases+snapshots)]
-@default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1634736303678

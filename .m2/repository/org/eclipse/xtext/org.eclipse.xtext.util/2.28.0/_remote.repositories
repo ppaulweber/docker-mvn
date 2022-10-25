@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sun Oct 23 11:30:12 CEST 2022
+org.eclipse.xtext.util-2.28.0-javadoc.jar>=
+org.eclipse.xtext.util-2.28.0-sources.jar>=
+org.eclipse.xtext.util-2.28.0.pom>=
+org.eclipse.xtext.util-2.28.0.jar>=
